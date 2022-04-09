@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid black;
+           
+            height: 100px;
+            width: 100px;
+            position: relative;
+            animation-name: example;
+            background-color: pink;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;/* time duration multiple time duration 3s 2s*/
+            border-radius: 50%;/*circl shape*/
+         }
+         div:hover{
+             background-color: yellow;
+             height: 200px;
+             width: 200px;
+
+         }
+         @keyframes example{
+         0%{
+             background-color: turquoise;
+             left: 0px;
+             top: 0px;
+         }
+         25%{
+             background-color:red ;
+             left: 500px;
+             top: 0px;
+         }
+         50%{
+             background: orange;
+             left: 500px;
+             top: 500px;
+            
+            
+         }
+         75%{
+             background-color: orchid;
+             left: 0px;
+            top: 500px;
+         }
+         100%{
+             background-color: purple;
+             left: 0;
+             top: 0;
+
+         }
+         }
+         
+    </style>
+</head>
+<body>
+    <h1>CSS Animation</h1> 
+
+    <div>
+
+    </div>
+    
+</body>
+</html>

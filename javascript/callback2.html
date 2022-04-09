@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       function userData(callback){
+       setTimeout(()=>{
+         console.log("userData")
+         callback();  
+       },2000);
+       }
+
+       function loginpage(callback2){
+       setTimeout(()=>{
+           console.log("loginpage")
+           callback2();
+       },5000);
+       }
+       function requestlogin(){
+           setTimeout(()=>{
+               console.log("requestlogin")
+        
+           },1000);
+       }
+
+       function acceptrequest(){
+           setTimeout(() => {
+             console.log("acceptrequest")  
+           },2000 );
+       }
+
+       userData(function(){
+        loginpage(function(){
+         requestlogin(function(){
+             acceptrequest(function(){
+
+             });
+         });
+
+      });
+        });
+       
+    
+   </script> 
+</body>
+</html>

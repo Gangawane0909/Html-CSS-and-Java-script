@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <button onclick="createPara()">Create Paragraph</button>
+        <input id ="data" type="text"/>
+        <button onclick="accessData()">Display Data</button>
+
+        <script>
+            function accessData(){
+                let data = document.getElementById("data").value;
+                console.log("Inserted data:",data);
+                document.write("Inserted data:",data);
+
+
+            }
+            function createPara(){
+                let body = document.body;
+                let Paragraph= document.getElementById("p");
+                let content = "welcome to javascript Magic";
+                
+                body.append(Paragraph);
+                Paragraph.append(content);
+            }
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 500px;
+         /*   border: 2px solid black;*/
+            margin: auto;
+            background-color: lightgray;
+        } 
+       input,label{
+            height: 30PX;
+            width: 300px;
+            margin-left: 50px;
+          margin-top: 13px;
+          /* display: flex; */
+        /*  gap: -5px;*/
+            
+        }
+        h1{
+         margin: auto;
+         align-items: center;
+         margin-left: 515px;
+        }
+        button{
+            height: 30px;
+            width: 150px;
+            margin: auto;
+            margin-left: 170px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration From</h1>
+    <div class="container">
+    <form autocomplete="on" action="">
+       
+
+        <label for="text" class="firstname"  ></label>
+        <input type='text'  maxlength="7" id="firstName" placeholder="FirstName" required/><br><br>
+
+        <label class="lastname" ></label>
+        <input type='text' maxlength="10" id="lastName" placeholder="LastName"required/><br><br>
+
+       <label class="email" ></label>
+        <input type="text" maxlength="25" id="Email" placeholder="Email" required/><br><br>
+
+        <label class="city" ></label>
+        <input type='text' maxlength="4" id="City" placeholder="City" required/><br><br>
+
+
+<button type="button" Onclick="submitData()" class="button">Submit</button>
+
+<a href="login.html">Login</a>
+    
+
+    </form>
+
+    <script>
+        function submitData(){
+        var firstName = document.getElementById('firstName').value
+        console.log(firstName)
+       var lastName = document.getElementById('lastName').value
+       console.log(lastName)
+       var email = document.getElementById('Email').value
+       console.log(email)
+       var city = document.getElementById('City').value
+       console.log(city)
+
+       
+       var jsonString = JSON.stringify({FirstName:firstName,Lastname:lastName,Email:email,City:city});
+     console.log(jsonString);
+    }
+    //consum the promises = .then() and .catch()
+//fetch Method = used to request to the server and load the information in the webpages.
+       fetch('url',{
+           body:jsonString,
+          Headers:{
+               'Content-type':'application/json'
+}
+       })
+
+          .then(Response=>console.log(respons.jSON))
+</script>
+</div>
+</body>
+</html>

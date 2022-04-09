@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    #btn{
+        padding: 2px 14px;
+        color: white;
+        background-color: red;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+
+    }
+</style>
+<body>
+
+    <!-- browser event = 
+    click
+    mouseover/ mouseout
+    mousedown/ mouseup
+    mousemove
+
+    from event = 
+    submit -->
+
+
+    <div class="container">
+        <h1>Event</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officia dolor explicabo vero. Deserunt sed explicabo sit at dolorem totam iure aut pariatur recusandae praesentium nemo error qui tempore illum molestias eveniet aperiam, commodi animi rerum exercitationem fugiat. Illum, obcaecati?</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <script>
+        function toggleHide(){
+        let btn = document.getElementById('btn');
+        console.log(btn);
+        if(para.style.display != 'none'){
+        para.style.display = 'none';
+        }else{
+para.style.display = 'block';
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JS Promises</h1>
+    <script>
+        // let isActive =false
+
+        // const getEmployeeInfo=()=>{
+        //     if(isActive){
+        //         let employee={
+        //         name:'John',
+        //         city:'Pune'
+        //     }
+        //     console.log(employee);
+        // }else{
+        //     console.log('employee information not found!!!');
+        // }
+        // }
+
+        // const checkEmployee=()=>{
+        //     getEmployeeInfo()
+        // }
+        // checkEmployee()
+
+        //.then= resolve method and .catch = reject method
+
+
+        let isActive =true
+
+        const getEmployeeInfo=new Promise((resolve,reject)=>{
+
+    
+            if(isActive){
+                let employee={
+                name:'Shradha',
+                city:'Pune',
+                email:'sgangawane1999@gmail.com'
+            }
+            resolve(employee)
+        }else{
+            let rejectReason=new Error('employee information not found!!!');
+            reject(rejectReason)
+        }
+        })
+
+        // const checkEmployee=()=>{
+        //     console.log(111111111111)
+        //     getEmployeeInfo
+        //     .then(fullfilled=>console.log(fullfilled))
+        //     .catch(reject=>console.log(reject.message))
+        //     console.log(22222222222)
+        // }
+
+
+        const checkEmployee = async()=>{
+            console.log('111111111');
+           let empObj = await getEmployeeInfo
+            // .then(fullfilled=>console.log(fullfilled))
+            // .catch(reject=>console.log(reject.message))
+            console.log(empObj);
+            console.log('2222222');
+        }
+        checkEmployee()
+
+
+    </script>
+</body>
+</html>

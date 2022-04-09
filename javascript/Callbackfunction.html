@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--function to passing to yargument in parameters is callback function
+    1. settimeout =>after same time excute in output  -->
+
+    <script>
+        function Demo1( name,Demo2){
+            console.log("Hello Demo1")
+            Demo2(name)
+        }
+        function Demo2(name){
+            console.log("Hello ,"+ name )
+        }
+        setTimeout(Demo1,2000,'John',Demo2)
+       Demo1('John')
+
+      
+       
+
+    </script>
+</body>
+</html>

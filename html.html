@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .container {
+        height: 1000px;
+        width: 100%;
+     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 1000px;
+    }
+
+  /*  .box {
+        height: 300px;
+        width: 400px;
+        background-color: indigo;
+        transition: transform 4s;
+        color: lavenderblush;
+        padding: 5px;
+
+    }*/
+
+    .box:hover {
+        transform: scale(1.2);
+        background-color: red;
+        transition: 3s;
+    }
+
+    .Search {
+        background-color: lightcoral;
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+
+    }
+
+    .flip-card {
+        height: 300px;
+        width: 300px;
+        perspective: 1000px;
+    }
+
+    .flip-card-inner {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 2s;
+        transform-style: preserve-3d;
+
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        background-color: #bbb;
+        color: black;
+    }
+
+
+    .flip-card-back {
+        /* background-color: dodgerblue; */
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    .front1 {
+        margin-left: 120px;
+    }
+
+    .front2 {
+        margin-left: 50px;
+    }
+
+    p {
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+     <div class="box">
+       <!-- <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae corrupti labore perferendis
+            cupiditate provident sed ratione perspiciatis ad deleniti vero. Fugiat repellendus rem rerum minus eius
+            fuga repellat veniam praesentium, eum ab magni, suscipit officia dignissimos non, consequuntur placeat.
+            Suscipit rem neque ad eius laudantium.</h1>
+            <input type="text" placeholder="Search" id="Search" value="Search" class="Search">-->
+    </div> 
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+                        alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Nitin</h1>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+</body>
+
+</html>
+</body>
+</html>

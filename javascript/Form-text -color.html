@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Shradha Gangawane</p>
+    <div id="Shradha Gangawane">Shradha Gangawane</div>
+   <input id="input" type="text"/>
+   <button onclick="changes()"> Input Element button</button>
+
+   <script>
+       console.log(document.getElementsByTagName("p"));
+
+       console.log(document.querySelectorAll("p"));
+
+       function changes(){
+           let inputfield = document.getElementById("input");
+           console.log(inputfield.value);
+
+           inputfield.style.color = "Pink";
+       }
+   </script>
+</body>
+</html>

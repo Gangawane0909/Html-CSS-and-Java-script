@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100%;
+            width: 700px;
+            margin: auto;
+            background-color: antiquewhite;
+            box-shadow: 20px 20px 20px ;
+            border-radius: 20px;
+        }
+        input{
+            height: 30px;
+            width: 550px;
+            margin-left: 65px;
+            font-family: Verdana, Geneva, sans-serif;
+            /* text-emphasis-color: black; */
+            /* text-emphasis: none; */
+            border-radius: 8px;
+         }
+        h1{
+        display: grid;
+        text-align: center;
+        }
+        /* button{
+            height: 40px;
+            width: 300px;
+           justify-content: left;
+           margin-left: 200px;
+           font-family: Verdana, Geneva, sans-serif;
+           background-color: lightgreen;
+           border: none;
+           border-radius: 8px;
+             } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ENQUIRY FORM</h1><hr>
+<label for="text" class="FulName"></label>
+<input type="text" id="FullName" placeholder="FullName" required/><br><br><br>
+
+<label for="text" class="MobileNumber"></label>
+<input type="text" id="MobileNumber" placeholder="MobileNumber" required/><br><br><br>
+
+<label for="text" class="AlternateMobile"  ></label>
+<input type="text" id="AlternateMobile" placeholder="AlternateMobile" required/><br><br><br>
+
+<label for="text" class="Email"></label>
+<input type="text" id="Email" placeholder="Email" required/><br><br><br>
+
+<select name="choice" style="height: 35px; width: 560px; margin-left: 63px;border-radius: 8px;"  >
+    <option value="first" selected>EnqirySource</option>
+    <option value="second" >Friends</option>
+    <option value="third" >Relative</option>
+    <option value="fourth">Whatsapp</option>
+    <option value="fifth">Facebook</option>
+    <option value="sixth">Instagram</option>
+</select><br><br><br>
+
+<label for="text" class=""></label>
+<input type="text" id="Commet" placeholder="Commet" required/><br><br><br>
+
+<select name="choice" style="height: 35px; width: 560px; margin-left: 63px; border-radius: 8px;">
+<option value="first" selected>Mode</option>
+<option value="second" >Online</option>
+<option value="third">Offline</option>
+</select><br><br><br>
+
+<select name="choice" style="height: 35px; width: 560px; margin-left: 63px; border-radius: 8px;">
+<option value="first" selected>Demo</option>
+<option value="second">Yes</option>
+<option value="third">No</option>
+</select><br><br><br>
+
+<select name="choice" style="height: 35px; width: 560px; margin-left: 63px; border-radius: 8px;">
+<option value="first" selected>Technology</option>
+<option value="second">Java</option>
+<option value="third">Spring</option>
+<option value="fourth">React</option>
+<option value="fifth">HTML</option>
+<option value="sixth">CSS</option>
+</select><br><br><br>
+
+<label for="text" class="Qualification"></label>
+<input type="text"id="Qulification" name="Qulification" placeholder="Qualification" required/><br><br><br>
+
+<label for="text" class="Experience"></label>
+<input type="text" id="Experience" name="Experience" placeholder="Experience" required/><br><br><br>
+
+<label for="text" class="Location"></label>
+<input type="text" id="Location" name="Location" placeholder="Location" required/><br><br><br>
+
+<label for="text" class="ProposedFee"></label>
+<input type="text" id="ProposedFee" name="ProposedFee" placeholder="ProposedFee" required/><br><br><br>
+
+<label for="text" class="FinalizedFee"></label>
+<input type="text" id="FinalizedFee" name="FinalizedFee" placeholder="FinalizedFee" required/><br><br><br>
+
+<label for="text" class="EnquiryDate1"></label>
+<input type="text" id="EnquiryDate1" name="EnquiryDate1" placeholder="EnquiryDate1" required/><br><br><br>
+
+<select name="choice" style="height: 35px; width: 560px; margin-left: 63px; border-radius: 8px;">
+<option value="first">status</option>
+<option value="second">Interested</option>
+<option value="third">Not Interested</option>
+<option value="four">Looking for other courses</option>
+</select><br><br><br>
+
+<label for="text" class="FollowUpDate"></label>
+<input type="text" id ="FollowUpDate" name="FollowUpDate" placeholder="FollowUpDate" required/><br><br>
+
+<select name="choice" style="height: 35px; width: 560px; margin-left: 63px; border-radius: 8px;">
+<option value="first">CreatedBy</option>
+<option value="second">Admin</option>
+<option value="third">Counsellor</option>
+<option value="four">Marketing</option>
+</select><br><br><br>
+
+<label for="text" class="CreatedDate"></label>
+<input type="text"id ="CreatedDate" name="CreatedDate" placeholder="CreatedDate" required/><br><br><br>
+
+<!-- <button>Submit</button> -->
+    </div>
+    <script>
+        function inquiryfrom(){
+             FullName = document.getElementById('FullName').value
+             MobileNumber = document.getElementById('MobileNumber').value
+             AlternateMobile = document.getElementById('AlternateMobile').value
+             Email = document.getElementById('Email').value
+             EnqirySource = document.getElementById('EnqirySource').value
+             Commet = document.getElementById('Commet').value
+             Mode = document.getElementById('Mode').value
+             Demo = document.getElementById('Demo').value
+             Technology = document.getElementById('Technology').value
+             Qualification = document.getElementById('Qualification').value
+             Experience = document.getElementById('Experience').value
+             Location = document.getElementById('Location').value
+             ProposedFee = document.getElementById('ProposedFee').value
+             FinalizedFee = document.getElementById('FinalizedFee').value
+             EnquiryDate1 = document.getElementById('EnquiryDate1').value
+             status= document.getElementById('status').value
+             FollowUpDate = document.getElementById('FollowUpDate').value
+             CreatedBy = document.getElementById('CreatedBy').value
+             CreatedDate = document.getElementById('CreatedDate').value
+            
+            
+             jsonString = JSON.stringify({FullName:FullName,MobileNumber:MobileNumber,AlternateMobile:AlternateMobile,Email:Email,
+                EnqirySource:EnqirySource,Commet:Commet,Mode:Mode,Demo:Demo,Technology:Technology,Qualification:Qualification,
+                Experience:Experience,Location:Location,ProposedFee:ProposedFee,FinalizedFee:FinalizedFee,
+                EnquiryDate1:EnquiryDate1,status:status,FollowUpDate:FollowUpDate,CreatedBy:CreatedBy,CreatedDate:CreatedDate });
+          
+          fetch("",{
+              method:'POST',
+              body:jsonString,
+              headers:{
+                  'contact-type':'application/json'
+              }
+          
+          })
+          .then(Response=>Response.text())
+          .then(res=>{
+              console.log(res);
+          })
+        }
+        alert("inquiryform open sucessfully... ");
+
+    </script>
+</body>
+</html>

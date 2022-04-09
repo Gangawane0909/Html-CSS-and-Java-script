@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .container{
+            height: 500px;
+            width: 450px;
+     /*    border: 2px solid black;*/
+            margin: auto; 
+           /*element are center*/
+           background-color: rgb(104, 10, 68); 
+          
+          box-shadow: 11px 11px white ;
+          border-radius: 30px;
+
+        }
+   
+        h1{
+            text-align: center;
+            color: aqua;
+            }
+        input{
+            height: 40px;
+            width: 320px;
+           align-items: center;
+          margin-left: 65px;
+          vertical-align: middle;
+          font-family: Verdana, Geneva, sans-serif;
+          border-radius: 10px;
+          border: none;
+          
+          
+        }
+        .button{
+            height: 40px;
+            width: 180px;
+           background-color: #82cedb; 
+          margin-left: 580px; 
+           margin-top: -70px; 
+           /* margin-top: -500px; */
+          float: left;  
+          
+          border: none;
+          border-radius: 20px;
+           }
+           p{
+               /* margin-left: 500px; */
+             padding-left: 550px;
+             margin-top: -20px;
+             color: white;
+           }
+           a{
+               color: aqua;
+           }
+        </style>
+</head>
+<form action="">
+
+
+    <div class="container">
+        
+        <h1 >Registration From</h1>
+        <hr>
+        <label for="text" class="firstname"  ></label>
+        <input type='text'  maxlength="7" id="firstName" placeholder="FirstName" required/><br><br>
+ 
+        <label for="text" class="lastname"  ></label>
+        <input type="text" maxlength="10" id="lastName" placeholder="LastName" required> <br><br>
+
+        <label for="text" class="email"  ></label>
+        <input type="text" maxlength="30" id="email" placeholder="Email" required/><br><br>
+
+        <label for="text" class="userName"  ></label>
+        <input type="text" maxlength="20" id="userName" placeholder="userName" required/><br><br>
+        
+
+         <label for="text" class="password"  ></label>
+        <input type="text" maxlength="13"id="password" placeholder="Password" required/><br><br>
+
+       
+        
+        <label for="text" class="contact"  ></label>
+        <input type="text" maxlength="13"id="contact" placeholder="Contact" required/><br><br>
+
+      </div>
+      <button type="submit" class="button" onClick="register()" >register</button>
+   
+    <p class="p">Already  Have An Account<a href="login.html">Log In</a> </p>
+    </form>
+</body>
+    <script>
+      
+        function register(){
+            firstName=document.getElementById("firstName").value
+            lastName=document.getElementById("lastName").value
+            email=document.getElementById("email").value
+            userName=document.getElementById("userName").value
+            password=document.getElementById("password").value
+            contact=document.getElementById("contact").value
+            
+           jsonString=JSON.stringify({firstName:firstName,lastName:lastName,email:email,userName:userName,password:password,contact:contact}) 
+
+
+
+   
+       fetch("http://localhost:8080/register",{
+         method:'POST',
+         body:jsonString,
+         headers:{
+             'content-type':'application/json'
+         }
+       })
+        .then(response=>response.text())
+        .then(res=>console.log(res))
+
+        function sendData(){
+            let email = document.getElementById("email").value
+        
+
+        }
+        function register (){
+           let inputfield = document.getElementById("input");
+           console.log(inputfield.value);
+        alert("Enquiry sucessfully..")
+
+        //    inputfield.style.color = "red"
+       }
+        }
+    </script>
+
+</html>

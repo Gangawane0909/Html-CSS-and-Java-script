@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        .container{
+           height: 300px;
+           width: 500px;
+          /* border: 2px solid black;*/
+           margin: auto;
+           /* background-color: rgb(9, 60, 94); */
+           background-color:lightgrey;
+           border-radius: 30px;
+       }
+       h1{
+           margin-left: 210px;
+           color: white;
+       }
+       input{
+           height: 40px;
+           width: 250px;
+       margin-left: 130px;
+       border: none;
+       border-radius: 10px;
+       }
+       button{
+           height: 35px;
+           width: 150px;
+           float: left;
+           margin-left: 180px;
+           border: none;
+         background-color:  rgb(139, 159, 197);
+         border-radius: 10px;
+
+       }
+       a{
+           color: white;
+       }
+   </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>LOGIN</h1>
+        <hr>
+        <form action="" method="post">
+        
+    <label class="UserName"></label>
+    <input type="text" id="UserName" placeholder="UserName"/><br><br>
+
+    <label class="Password"></label>
+    <input type="text" id="Password" placeholder="Password"/><br><br>
+    <button type="submit" onclick="submitData()">Login</button>
+
+</from>
+<!-- <button type="button" Onclick="submitData()">Login</button> -->
+ <a href="" class="a">Forget Password</a> 
+ <!-- <button type="button" class="btn" onclick="reg()">Not User, Register</button> -->
+<div>
+   
+</div>
+</body>
+      <script>
+          function submitData(){
+               UserName = document.getElementById('UserName').value
+              
+               Password = document.getElementById('Password').value
+              
+               jsonString = JSON.stringify({UserName:UserName,Password:Password});
+
+            //    for(const User of existinglist){
+            //        console.log(user.UserName+''user.userPassword)
+            //    }
+            
+            fetch("http://localhost:8080/login",{
+                method:'POST',
+                body:jsonString,
+                headers:{
+                    'contact-type':'application/json'
+                }
+            
+            })
+            .then(Response=>Response.text())
+            .then(res=>{
+                console.log(res);
+            })
+          }
+        //   function reg(){
+        //       window.open("registration.html")
+        //   }
+      </script>
+     </div>
+
+</html>

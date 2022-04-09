@@ -1,0 +1,31 @@
+.Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px
+
+}
+.box1,.box2,.box3,.box4,.box5{
+    border: 2px solid black;
+    height: 200px;
+    width: 300px;
+}
+.box1{
+    width: 1200px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.box2{
+    width: 500px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.box3 {
+    width: 600px;
+    grid-column-start: span;
+}
+.box4,.box5{
+width: 600px;
+}
+.box2{
+    padding: 20px;
+}

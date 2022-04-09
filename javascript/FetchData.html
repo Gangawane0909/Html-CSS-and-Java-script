@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch-Get request</h1>
+    <p id="pid"></p>
+
+<input type='text' id='fname'/>
+<button type="button" onclick ="showValue()">Display value</button>
+
+    <script>
+      
+
+      let value1 = 10
+        let value2 = 20
+
+        let total = value1+value2
+  
+        console.log('Addtion of '+ + value1 + 'and'+value2+ 'is:' + total);
+        console.log(`Addtion of  ${value1} and ${value2}is:  ${total}`);
+        
+
+  //Get request
+        fetch("https://jsonpl")
+        .then(response=>response.json())
+        .then(res=>console.log(res))
+
+
+        function showValue(){
+            let fName = document.getElementById('fname').value
+
+            document.getElementById('pid').innerHTML = fName
+
+
+
+        }
+    </script>
+</body>
+</html>

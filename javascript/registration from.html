@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from>
+        <label autocomplete="on" action="">
+            <label for="fname">Full Name</label>
+           <input maxlength="6"   size="10" id="fname" type="text" ><br><br>
+
+           <label for="email" type="email">Email</label>
+          <input  id="email" type="email" required /><br><br>
+
+           <label  for="Password" >Password</label>
+          <input id="Password" type="password" required><br><br>
+
+           <label for="Confirm Password">Confirm Password</label>
+           <input id="Confirm Password" required><br><br>
+
+           <label for="Age">Age</label>
+          <input id="Age" type="Age" required><br><br>
+
+          <button onclick="sendData()" type="button">Register</button>
+          
+        </form>
+        <script>
+            function sendData(){
+                let fname = document.getElementById("fname").value;
+                let email = document.getElementById("email").value;
+                let Password = document.getElementById("Password").value;
+                let ConfirmPassword = document.getElementById("Confirm Password").value;
+                let Age = document.getElementById("Age").value
+            }
+        </script>
+
+</body>
+</html>
